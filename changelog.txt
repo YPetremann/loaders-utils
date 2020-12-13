@@ -1,0 +1,26 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2020-12-13
+  Changes:
+    - Update to 1.1
+  Todo:
+    - when two ghost loaders face each other, they shouldn't be updated.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 2020-06-23
+  Bugfixes:
+    - Fix a small bugs in description.
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 2020-06-23
+  Loader-Snapping:
+    - Snap on placement and rotation
+    - Snap with belts, underground belts, splitter and other loaders
+    - Detect ambiguous state where input and output belt can connected to the loader at the same time
+    - Snap is locked if state unambiguous
+    - Snap will display vanilla errors if snapping fails
+    - Manual toggling is possible if two loaders face each other
+    - Manual toggling is possible if state is ambiguous
+  Compatibility:
+    - Provide setting to select snapping algorithm from various mods
+    - Provide setting to select working (pushing and pulling from inventory) algorithm from various mods

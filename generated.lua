@@ -1,0 +1,25 @@
+return {
+  lua={
+    ["control"]=true,
+    ["settings"]=true,
+    ["common"]=true,
+    ["common.setting-reloader"]=true,
+    ["common.loaders-work"]=true,
+    ["common.loaders-snap"]=true,
+    ["lib.Rendering"]=true,
+    ["lib.BeltLoader"]=true,
+    ["lib.Events"]=true,
+    ["lib.Belt"]=true,
+    ["lib.BeltUnder"]=true,
+    ["lib.BeltSplitter"]=true,
+    ["lib.Events.on_configuration_changed"]=true,
+    ["lib.Events.on_init"]=true,
+    ["lib.Events.on_nth_tick"]=true,
+    ["lib.Events.on_lua_shortcut"]=true,
+    ["lib.Events.on_load"]=true,
+    ["lib.Events.on_generic_event"]=true,
+  },
+  png={
+    ["thumbnail.png"]={144, 144},
+  },
+}
