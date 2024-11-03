@@ -1,10 +1,10 @@
 {
   "name": "loaders-utils",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "title": "Loaders snaps, works and utils",
   "author": "Thaui",
   "description": "Provide smart auto-snap feature of loaders to belt items and compatibility to loaders mods.",
-  "factorio_version": "1.1",
+  "factorio_version": "2.0",
   "dependencies": [
     "base",
     "(?) LoaderRedux",
@@ -13,15 +13,14 @@
     "(?) Krastorio2"
   ],
   "package": {
-    "no_git_push": true,
-    "no_portal_upload": true,
-    "scripts": {
-      "predebug": "bash -c \"make predebug\"",
-      "prepublish": "bash -c \"make prepublish\"",
-      "datestamp": "bash -c \"make datestamp\"",
-      "prepackage": "bash -c \"make prepackage\"",
-      "publish": "bash -c \"make publish\"",
-      "version": "bash -c \"make version\""
-    }
+    "readme": "README.md",
+    "gallery": [
+      "gallery/**.png"
+    ],
+    "ignore": [
+      "examples/**"
+    ],
+    "license": "LICENSE",
+    "sync_portal_details": true
   }
 }

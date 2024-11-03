@@ -1,5 +1,5 @@
 local lib = {}
-local loaders = {["loader"] = true, ["loader-1x1"] = true}
+local loaders = { ["loader"] = true, ["loader-1x1"] = true }
 function lib.valid(entity)
    return loaders[entity.type] or false
 end
@@ -24,33 +24,34 @@ function lib.connectable(loader)
    end
    return neighbours
 end
+
 function lib.try_rotate(builder, loader, direction)
    if loader.loader_type == direction then
    elseif not loader.rotatable then
       if builder.is_player() then
-         loader.rotate {by_player = builder}
+         loader.rotate { by_player = builder }
       end
    elseif not (loader.force.name == "neutral" or loader.force == builder.force or loader.force.get_friend(builder.force)) then
       if builder.is_player() then
-         loader.rotate {by_player = builder}
+         loader.rotate { by_player = builder }
       end
    else
       loader.loader_type = direction
    end
 end
+
 function lib.autoconnect(loader, builder, default, manual)
    local input = 0
    local output = 0
    if manual then
-
       -- temporay set nearby loaders to input
       local sub_loaders = {}
-      table.insert(sub_loaders, {dir = loader.loader_type, ent = loader})
+      table.insert(sub_loaders, { dir = loader.loader_type, ent = loader })
       loader.loader_type = "output"
       local neighbours = lib.connectable(loader)
       for _, l in ipairs(neighbours) do
          if lib.valid(l) then
-            table.insert(sub_loaders, {dir = l.loader_type, ent = l})
+            table.insert(sub_loaders, { dir = l.loader_type, ent = l })
             l.loader_type = "input"
          end
       end
@@ -103,4 +104,5 @@ function lib.autoconnect(loader, builder, default, manual)
       -- game.print(game.tick.." "..input.." >> "..output.." : keep >> "..loader.loader_type)
    end
 end
+
 return lib

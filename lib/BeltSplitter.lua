@@ -1,12 +1,12 @@
 local lib = {}
 
-local splitter = {["splitter"] = true}
+local splitter = { ["splitter"] = true }
 function lib.valid(entity)
    return splitter[entity.type] or false
 end
 
 function lib.rotate(splitter)
-   splitter.direction = (splitter.direction + 2) % 8
+   splitter.direction = (splitter.direction + 4) % 16
 end
 
 function lib.switch(splitter)
