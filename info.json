@@ -1,6 +1,6 @@
 {
   "name": "loaders-utils",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "title": "Loaders snaps, works and utils",
   "author": "Thaui",
   "description": "Provide smart auto-snap feature of loaders to belt items and compatibility to loaders mods.",
